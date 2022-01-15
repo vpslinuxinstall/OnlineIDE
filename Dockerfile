@@ -1,7 +1,8 @@
 #Heroku Support
 FROM python:3.9
 RUN apt update && apt upgrade -y && apt install php nginx libncurses-dev nodejs npm tmux byobu screen neofetch git -y
-RUN apt install fuse
+RUN apt update
+RUN yes Y | apt install fuse
 RUN apt install aria2
 RUN mkdir /krypton
 COPY . /krypton
